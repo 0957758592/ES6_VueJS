@@ -1,0 +1,30 @@
+.wrapper{
+        margin: 0 50px;
+}
+
+table {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+thead {
+    flex: 0 0 auto;
+    background-color: #ffffff;
+    margin-right: 50px;
+    border: 1px solid steelblue;
+}
+
+tbody {
+    flex: 1 1 auto;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 100px;
+}
+
+tr {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
