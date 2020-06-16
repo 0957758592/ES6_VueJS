@@ -12,13 +12,6 @@ Vue.directive('scroll', {
     }
 })
 
-Vue.filter("currency", value => {
-    if (value >= 0) {
-        return "$" + value.toFixed(2).toLocaleString();
-    }
-    return null;
-});
-
 Vue.component('data-table', {
     data() {
         return {
@@ -79,13 +72,6 @@ Vue.component('data-table', {
             this.searchedPhotos = photos.map((photo) => ({ ...photo, albumTitle: albumsData[photo.albumId].title }))
             this.loadMore()
         }).catch(err => this.error = "Loading error")
-    },
-    filters: {
-        capitalize(value) {
-            if (!value) return ''
-            value = value.toString()
-            return value.charAt(0).toUpperCase() + value.slice(1)
-        }
     },
     template: `
     <div class="wrapper">
